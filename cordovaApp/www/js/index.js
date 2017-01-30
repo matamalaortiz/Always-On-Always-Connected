@@ -1,22 +1,32 @@
-/*
-App-o-Mat jQuery Mobile Cordova starter template
-https://github.com/app-o-mat/jqm-cordova-template-project
-http://app-o-mat.com
+$(function(){
 
-MIT License
-https://github.com/app-o-mat/jqm-cordova-template-project/LICENSE.md
-*/
+	var msgs = ["You are an awesome photographer", "You are a great photographer!", "OMG!! You are so good!", "WOW you are awesome!"];
+	var msg = msgs[Math.floor(Math.random()*msgs.length)];
 
-var appomat = {};
 
-appomat.app = {
-	
-    initialize: function() {
-		document.addEventListener('deviceready', this.onDeviceReady, false);
-    },
+	function photoSuccess(imgData) {
+		$("#img_cam").attr("src",imgData);
+		$("#nice").removeClass("hidden");
+		$("#nice").html(msg);
+		$("#btn_camera").html("Try Again");
+		$("#firstMSG").addClass("hidden")
 
-    onDeviceReady: function() {
-		FastClick.attach(document.body);
-    }
+	}
 
-};
+	function camError(error) {
+		$("#nice").html("Something went wrong");
+
+	}
+
+	function accessCamera() {
+		var options = {
+			destinationType: Camera.DestinationType.FILE_URI,
+			source: Camera.PictureSourceType.CAMERA
+		};
+
+		navigator.camera.getPicture(photoSuccess, camError, options);
+
+	}
+
+	$("#btn_camera").on("click", accessCamera);
+})

@@ -1,20 +1,97 @@
-/*
-App-o-Mat jQuery Mobile Cordova starter template
-Copyright 2014 Lou Franco
-https://github.com/app-o-mat/jqm-cordova-template-project
-http://app-o-mat.com
 
-MIT License
-https://github.com/app-o-mat/jqm-cordova-template-project/LICENSE.md
-*/
-
-/* Make the webviews act less like a browser, and more like an app*/
 body {
     -webkit-touch-callout: none;
     -webkit-text-size-adjust: none;
     -webkit-user-select: none;
+    background-color: black !important;\
+    max-width: 100%;
+    max-height: 100%;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+
+.ui-mobile [data-role=page], .ui-mobile [data-role=dialog], .ui-page {
+    background-color: #e0e0e0;
+    max-width: 100%;
+    max-height: 100%;
+    overflow-x: hidden;
+    overflow-y: hidden;
 }
 
 #img_cam{
   width: 100%;
+  position: absolute;
+  margin-top: 10%;
+  -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+   filter: grayscale(100%);
+   mix-blend-mode: multiply;
+}
+
+#btn_camera {
+    position: absolute;
+    bottom: 50px;
+    background-color: #ecffb1;
+    border: none;
+    padding: 10px;
+    margin-left: 37%;
+}
+
+#imgWrapper {
+  width: 70% !important;
+}
+
+p#firstMSG {
+    width: 60%;
+    margin-left: 10px;
+    margin-top: 18%;
+    color: black;
+    font-size: 30px;
+}
+
+p {
+  position: absolute;
+  width: 60%;
+  font-size: 30px;
+  font-weight: bolder;
+  font-family: Arial, sans-serif;
+  color: #ecffb1;
+  text-transform: uppercase;
+}
+
+p#nice{
+  position: absolute;
+  margin-left: 10px;
+
+}
+
+.clockwise {
+    -webkit-animation: clockwiseSpin 100s infinite linear;
+    animation: clockwiseSpin 100s infinite linear;
+}
+
+@-webkit-keyframes clockwiseSpin {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes clockwiseSpin {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(160deg);
+        transform: rotate(360deg);
+    }
+}
+
+.hidden {
+  display: none;
 }

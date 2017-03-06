@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+
+    <link rel="stylesheet" href="style.css">
+
+    <title>Client Side</title>
+</head>
+
+<body>
+    <div id="app">
+        {{ message }}
+        <h1 id="nameUser"></h1>
+
+        <h1 id="count"></h1>
+        <button id="btn" v-on:click="doThis">Click</button>
+        <button id="reset">reset</button>
+    </div>
+    <div id="main">
+        <img src="picasso.jpg" alt="" id="picasso">
+    </div>
+
+    <div>
+        <button id="startButton">Start</button>
+        <br/>
+    </div>
+
+    <div id="controlsDiv">
+
+        <div id="statusDiv">
+            <!-- Button status is unknown. -->
+        </div>
+
+        <button id="disconnectButton">Disconnect</button>
+    </div>
+
+    <div id="output" class="output">
+        <div id="content"></div>
+        <div id="status"></div>
+        <pre id="log"></pre>
+    </div>
+
+
+    <script src="https://www.gstatic.com/firebasejs/3.6.10/firebase.js"></script>
+
+
+    <script src="tone.js"></script>
+    <script src="app.js"></script>
+    <script type="text/javascript" src="chromeSamples.js"></script>
+    <script src="ble.js"></script>
+
+
+
+</body>
+
+</html>

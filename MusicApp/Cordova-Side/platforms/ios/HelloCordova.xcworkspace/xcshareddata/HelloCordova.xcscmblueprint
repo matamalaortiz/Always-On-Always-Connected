@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "88FA5B0984775D1B6114A2D919E67C0B07A4E6A1",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "88FA5B0984775D1B6114A2D919E67C0B07A4E6A1" : 9223372036854775807,
+    "76A86C509EFA8207FD3B9E205B6F20652D20AC4B" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "1B3B3CC4-DE3E-49D5-8522-2DA1C342F96A",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "88FA5B0984775D1B6114A2D919E67C0B07A4E6A1" : "alwaysOn\/",
+    "76A86C509EFA8207FD3B9E205B6F20652D20AC4B" : ""
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "HelloCordova",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "MusicApp\/Cordova-Side\/platforms\/ios\/HelloCordova.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/matamalaortiz\/BLE-ITP.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "76A86C509EFA8207FD3B9E205B6F20652D20AC4B"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/matamalaortiz\/Always-On-Always-Connected.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "88FA5B0984775D1B6114A2D919E67C0B07A4E6A1"
+    }
+  ]
+}

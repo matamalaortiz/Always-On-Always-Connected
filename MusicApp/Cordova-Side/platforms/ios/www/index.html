@@ -11,8 +11,8 @@
         <style>
         body {
           margin: 0;
+          background-color: #b33838;
         }
-
         #btn {
             margin-top: 0px;
             background-color: #91cfca;
@@ -21,8 +21,10 @@
             height: 333px;
             position: absolute;
             border: none;
+            float: left;
             border-radius: 0px;
         }
+
 
         #btn2 {
             margin-top: 0px;
@@ -32,20 +34,56 @@
             height: 333px;
             margin-left: 50%;
             border: none;
+            float: left;
             border-radius: 0px;
         }
 
-        input#name{
-          margin-top: 390px;
-          left: 10px;
-          position: absolute;;
+        #btn3 {
+            background-color: #3caba2;
+            padding: 20px;
+            width: 50%;
+            height: 333px;
+            border: none;
+            float: left;
+            border-radius: 0px;
         }
 
-        button#submit {
-            left: 180px;
-            position: absolute;
-            margin-top: 411px;
+        #btn4 {
+            margin-top: -333px;
+            background-color: #ff3434;
+            padding: 20px;
+            width: 50%;
+            height: 333px;
+            margin-left: 50%;
+            border: none;
+            float: left;
+            border-radius: 0px;
         }
+
+        input#name {
+        margin-top: 390px;
+        left: 10px;
+        position: absolute;
+        width: 35%;
+        height: 7%;
+        font-size: 36px;
+        padding: 19px;
+        color: #171717;
+        border: none;
+        background-color: #ff7878;
+    }
+
+        button#submit {
+      left: 50%;
+      position: absolute;
+      margin-top: 742px;
+      width: 170px;
+      height: 68px;
+      border: none;
+      color: white;
+      font-size: 23px;
+      background-color: black;
+    }
         div{
           width: 50%;
           height: 333px;
@@ -76,7 +114,10 @@
     </head>
     <body>
  <button id="btn"></div>
-<button id="btn2" ontouchstart="mouseDown()" ontouchend="mouseUp()"></div>
+  <button id="btn2" ontouchstart="mouseDown()" ontouchend="mouseUp()"></div>
+    <button id="btn3" ></div>
+      <button id="btn4"></div>
+
   <div id='nameInput'>
     <input type="text" value="Value" id="name"><br />
     <button id="submit" type="button">Submit</button>

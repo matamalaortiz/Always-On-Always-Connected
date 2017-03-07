@@ -133,33 +133,69 @@ database.ref('bt3').on('value', function(snapshot) {
 
         // synth.triggerAttack('c2')
 
-        var osc = new Tone.Oscillator().toMaster()
+        var player = new Tone.Player("https://raw.githubusercontent.com/matamalaortiz/Always-On-Always-Connected/master/MusicApp/audios/makeit.mp3")
+          .toMaster()
+          player.autostart = true;
 
-        var player = new Tone.Player("https://raw.githubusercontent.com/matamalaortiz/Always-On-Always-Connected/master/MusicApp/audios/workit.mp3")
-        	.toMaster()
-        player.retrigger = true
+        readClickCountOnce(function(value) {
+            // console.log('clicked ->',value.buttonClicked);
+            writeClickCount(value.buttonClicked + 1);
+            // console.log(value.buttonClicked);
 
-        function playerCallback(time){
-        	player.start(time).stop(time + 0.1)
-        }
+        });
 
-        function oscCallback(time){
-        	osc.start(time).stop(time + 0.1)
-        }
+    } else {
 
-        //player scheduling
-        Tone.Transport.schedule(playerCallback, 0)
-        Tone.Transport.schedule(playerCallback, 1)
-        Tone.Transport.schedule(playerCallback, 2)
+        // synthillator.stop();
+        console.log('stop sensortag');
+        synth.triggerRelease()
+    }
 
-        //oscil scheduling
-        Tone.Transport.schedule(oscCallback, 0.5)
-        Tone.Transport.schedule(oscCallback, 1.5)
-        Tone.Transport.schedule(oscCallback, 2.5)
+});
 
-        Tone.Buffer.on('load', function(){
-          Tone.Transport.start().stop("+5.5").start("+4")
-        })
+
+database.ref('bt4').on('value', function(snapshot) {
+
+    var value = snapshot.val();
+
+    if (value.buttonClicked === 1) {
+        console.log("play sensotag");
+
+        // synth.triggerAttack('c2')
+
+        var player = new Tone.Player("https://raw.githubusercontent.com/matamalaortiz/Always-On-Always-Connected/master/MusicApp/audios/doit.mp3")
+          .toMaster()
+          player.autostart = true;
+
+        readClickCountOnce(function(value) {
+            // console.log('clicked ->',value.buttonClicked);
+            writeClickCount(value.buttonClicked + 1);
+            // console.log(value.buttonClicked);
+
+        });
+
+    } else {
+
+        // synthillator.stop();
+        console.log('stop sensortag');
+        synth.triggerRelease()
+    }
+
+});
+
+database.ref('bt1').on('value', function(snapshot) {
+
+    var value = snapshot.val();
+
+    if (value.buttonClicked === 1) {
+        console.log("play sensotag");
+
+        // synth.triggerAttack('c2')
+
+        var player = new Tone.Player("https://raw.githubusercontent.com/matamalaortiz/Always-On-Always-Connected/master/MusicApp/audios/doit.mp3")
+          .toMaster()
+          player.autostart = true;
+
         readClickCountOnce(function(value) {
             // console.log('clicked ->',value.buttonClicked);
             writeClickCount(value.buttonClicked + 1);

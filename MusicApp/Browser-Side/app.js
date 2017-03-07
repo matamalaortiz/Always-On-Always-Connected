@@ -107,10 +107,11 @@ database.ref('bt2').on('value', function(snapshot) {
 
     if (value.buttonClicked === 1) {
         console.log("play");
-        //
-        // synth2.triggerAttack('c4')
-        var player = new Tone.Player("https://tonejs.github.io/examples/audio/casio/A2.mp3")
+        var player = new Tone.Player("https://raw.githubusercontent.com/matamalaortiz/Always-On-Always-Connected/master/MusicApp/audios/workit.mp3")
           .toMaster()
+          player.autostart = true;
+        // synth2.triggerAttack('c4')
+
 
     } else {
 
@@ -134,7 +135,7 @@ database.ref('bt3').on('value', function(snapshot) {
 
         var osc = new Tone.Oscillator().toMaster()
 
-        var player = new Tone.Player("https://tonejs.github.io/examples/audio/casio/A1.mp3")
+        var player = new Tone.Player("https://raw.githubusercontent.com/matamalaortiz/Always-On-Always-Connected/master/MusicApp/audios/workit.mp3")
         	.toMaster()
         player.retrigger = true
 

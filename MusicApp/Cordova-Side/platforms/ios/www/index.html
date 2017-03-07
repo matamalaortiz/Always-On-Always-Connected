@@ -18,7 +18,7 @@
             background-color: #91cfca;
             padding: 20px;
             width: 50%;
-            height: 333px;
+            height: 233px;
             position: absolute;
             border: none;
             float: left;
@@ -31,7 +31,7 @@
             background-color: black;
             padding: 20px;
             width: 50%;
-            height: 333px;
+            height: 233px;
             margin-left: 50%;
             border: none;
             float: left;
@@ -42,18 +42,18 @@
             background-color: #3caba2;
             padding: 20px;
             width: 50%;
-            height: 333px;
+            height: 233px;
             border: none;
             float: left;
             border-radius: 0px;
         }
 
         #btn4 {
-            margin-top: -333px;
+            margin-top: -233px;
             background-color: #ff3434;
             padding: 20px;
             width: 50%;
-            height: 333px;
+            height: 233px;
             margin-left: 50%;
             border: none;
             float: left;
@@ -61,29 +61,31 @@
         }
 
         input#name {
-        margin-top: 390px;
-        left: 10px;
-        position: absolute;
-        width: 35%;
-        height: 7%;
-        font-size: 36px;
-        padding: 19px;
-        color: #171717;
-        border: none;
-        background-color: #ff7878;
-    }
+            margin-top: 50px;
+            left: 10px;
+            position: absolute;
+            width: 35%;
+            height: 5%;
+            font-size: 19px;
+            z-index: 1000;
+            padding: 19px;
+            color: #171717;
+            border: none;
+            background-color: #ff7878;
+        }
 
         button#submit {
-      left: 50%;
-      position: absolute;
-      margin-top: 742px;
-      width: 170px;
-      height: 68px;
-      border: none;
-      color: white;
-      font-size: 23px;
-      background-color: black;
-    }
+            left: 50%;
+            position: absolute;
+            margin-top: 39px;
+            width: 170px;
+            height: 68px;
+            border: none;
+            color: white;
+            font-size: 23px;
+            background-color: black;
+            z-index: 1000;
+        }
         div{
           width: 50%;
           height: 333px;
@@ -113,15 +115,16 @@
         </style>
     </head>
     <body>
- <button id="btn"></div>
-  <button id="btn2" ontouchstart="mouseDown()" ontouchend="mouseUp()"></div>
-    <button id="btn3" ontouchstart="mouseDown3()" ontouchend="mouseUp3()" ></div>
-      <button id="btn4" ontouchstart="mouseDown4()" ontouchend="mouseUp4()"></div>
 
-  <div id='nameInput'>
-    <input type="text" value="Value" id="name"><br />
-    <button id="submit" type="button">Submit</button>
-</div>
+ <button id="btn" ontouchstart="mouseDown0()" ontouchend="mouseUp0()"></button>
+  <button id="btn2" ontouchstart="mouseDown()" ontouchend="mouseUp()"></button>
+    <button id="btn3" ontouchstart="mouseDown3()" ontouchend="mouseUp3()" ></button>
+      <button id="btn4" ontouchstart="mouseDown4()" ontouchend="mouseUp4()"></button>
+
+        <div id='nameInput'>
+          <input type="text" value="Value" id="name"><br />
+          <button id="submit" type="button">Submit</button>
+      </div>
 <script type="text/javascript" src="./js/index.js"></script>
 <script>
 

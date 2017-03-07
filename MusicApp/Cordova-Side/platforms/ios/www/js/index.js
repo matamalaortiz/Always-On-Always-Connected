@@ -41,18 +41,19 @@ var app = {
     };
 
     var boton = document.getElementById("btn");
+    var boton = document.getElementById("btn1");
     var boton2 = document.getElementById("btn2");
     var boton3 = document.getElementById("btn3");
     var boton4 = document.getElementById("btn4");
 
-
-    boton.addEventListener('click', function(e){
-      readClickCountOnce(function(value) {
-      writeClickCount(value.buttonClicked+ 1);
-      });
-      e.preventDefault();
-      return false;
-    });
+    // 
+    // boton.addEventListener('click', function(e){
+    //   readClickCountOnce(function(value) {
+    //   writeClickCount(value.buttonClicked+ 1);
+    //   });
+    //   e.preventDefault();
+    //   return false;
+    // });
 
   var down = false;
 
@@ -107,7 +108,22 @@ var app = {
       }
     }
 
+    function mouseDown0(e) {
+        var down = true;
+        if (down === true ){
+          firebase.database().ref('btn').set({buttonClicked: 1});
+        }
+        e.preventDefault();
+        return false;
+    }
 
+
+    function mouseUp0() {
+      var down = false;
+      if (down === false ){
+          firebase.database().ref('btn').set({buttonClicked: 0});
+      }
+    }
 
     //
     // Funcion lee "Once" el estado actual de la bdd.

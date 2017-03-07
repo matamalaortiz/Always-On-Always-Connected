@@ -8,12 +8,12 @@ var config = {
 };
 firebase.initializeApp(config);
 
-var vue = new Vue({
-    el: '#app',
-    data: {
-        message: 'Hi'
-    }
-});
+// var vue = new Vue({
+//     el: '#app',
+//     data: {
+//         message: 'Hi'
+//     }
+// });
 
 
 var database = firebase.database();
@@ -26,6 +26,7 @@ var reset = document.getElementById("reset");
 var count = document.getElementById("count");
 var nameUser = document.getElementById("nameUser");
 var img = document.getElementById("picasso");
+var word = document.getElementById("word");
 var countClick = 0;
 var buttonState;
 var name;
@@ -48,19 +49,19 @@ window.addEventListener('load', function() {
 })
 
 // Event that goes to the database and read once the click state and add 1 to it.
-boton.addEventListener('click', function() {
-    readClickCountOnce(function(value) {
-        // console.log('clicked ->',value.buttonClicked);
-        writeClickCount(value.buttonClicked + 1);
-        // console.log(value.buttonClicked);
-
-    });
-});
+// boton.addEventListener('click', function() {
+//     readClickCountOnce(function(value) {
+//         // console.log('clicked ->',value.buttonClicked);
+//         writeClickCount(value.buttonClicked + 1);
+//         // console.log(value.buttonClicked);
+//
+//     });
+// });
 
 // Event that overwrite the funcion writeClickCount with 0.
-reset.addEventListener('click', function() {
-    writeClickCount(0);
-});
+// reset.addEventListener('click', function() {
+//     writeClickCount(0);
+// });
 
 // Read Once the state of counter and return the latest state
 function readClickCountOnce(callback) {
@@ -111,7 +112,8 @@ database.ref('bt2').on('value', function(snapshot) {
           .toMaster()
           player.autostart = true;
         // synth2.triggerAttack('c4')
-
+        word.innerHTML = "WORK IT";
+        document.body.style.backgroundColor = '#ff3434';
 
     } else {
 
@@ -136,6 +138,8 @@ database.ref('bt3').on('value', function(snapshot) {
         var player = new Tone.Player("https://raw.githubusercontent.com/matamalaortiz/Always-On-Always-Connected/master/MusicApp/audios/makeit.mp3")
           .toMaster()
           player.autostart = true;
+          word.innerHTML = "MAKE IT";
+          document.body.style.backgroundColor = '#3caba2';
 
         readClickCountOnce(function(value) {
             // console.log('clicked ->',value.buttonClicked);
@@ -166,6 +170,9 @@ database.ref('bt4').on('value', function(snapshot) {
         var player = new Tone.Player("https://raw.githubusercontent.com/matamalaortiz/Always-On-Always-Connected/master/MusicApp/audios/doit.mp3")
           .toMaster()
           player.autostart = true;
+          document.body.style.backgroundColor = '#ffae34';
+
+          word.innerHTML = "DO IT";
 
         readClickCountOnce(function(value) {
             // console.log('clicked ->',value.buttonClicked);
@@ -183,7 +190,7 @@ database.ref('bt4').on('value', function(snapshot) {
 
 });
 
-database.ref('bt1').on('value', function(snapshot) {
+database.ref('btn').on('value', function(snapshot) {
 
     var value = snapshot.val();
 
@@ -192,9 +199,12 @@ database.ref('bt1').on('value', function(snapshot) {
 
         // synth.triggerAttack('c2')
 
-        var player = new Tone.Player("https://raw.githubusercontent.com/matamalaortiz/Always-On-Always-Connected/master/MusicApp/audios/doit.mp3")
+        var player = new Tone.Player("https://raw.githubusercontent.com/matamalaortiz/Always-On-Always-Connected/master/MusicApp/audios/stronger.mp3")
           .toMaster()
           player.autostart = true;
+          word.innerHTML = "STRONGER";
+          document.body.style.backgroundColor = "yellow";
+
 
         readClickCountOnce(function(value) {
             // console.log('clicked ->',value.buttonClicked);
@@ -219,6 +229,6 @@ database.ref('users').on('value', function(snapshot) {
     var value = snapshot.val()
     var name = value.name
     console.log(name);
-    nameUser.innerHTML = value.name;
+    word.innerHTML = value.name;
 
 })

@@ -7,3 +7,8 @@ body{
 img#picasso{
   margin: auto;
 }
+h1#word {
+    margin-top: 15%;
+    font-family: Helvetica;
+    font-size: 215px;
+}

@@ -91,14 +91,27 @@ database.ref('bt5').on('value', function(snapshot) {
 
   if (value.buttonClicked === 1) {
     console.log("play");
-    var player = new Tone.Player("https://raw.githubusercontent.com/matamalaortiz/Always-On-Always-Connected/master/MusicApp/audios/ale_lead_phrase.mp3")
-     .toMaster()
-    player.autostart = true;
-    word.innerHTML = "•¶∞¶§";
-    document.body.style.backgroundColor = 'lightgreen';
-  } else {
-    console.log('stop');
-    }
+
+
+ var phrases = ["https://raw.githubusercontent.com/matamalaortiz/Always-On-Always-Connected/master/MusicApp/audios/ale_lead_phrase.mp3",
+    "https://raw.githubusercontent.com/matamalaortiz/Always-On-Always-Connected/master/MusicApp/audios/ale_lead_phrase_2.mp3","https://raw.githubusercontent.com/matamalaortiz/Always-On-Always-Connected/master/MusicApp/audios/ale_lead_phrase_4.mp3","https://raw.githubusercontent.com/matamalaortiz/Always-On-Always-Connected/master/MusicApp/audios/ale_lead_phrase_short.mp3"]
+ var newPhrase = [];
+
+  for(var i = 0; i < phrases.length ; i++) {
+      var idx = Math.floor(Math.random() * phrases.length);
+      console.log(idx);
+      newPhrase.push(phrases[idx]);
+      phrases.splice(idx, 1);
+      console.log(phrases[idx]);
+      // console.log(newPhrase);
+         var player = new Tone.Player(phrases[idx])
+          .toMaster()
+         player.autostart = true;
+         word.innerHTML = "•¶∞¶§";
+         document.body.style.backgroundColor = 'lightgreen';
+  }
+
+  }
 });
 
 

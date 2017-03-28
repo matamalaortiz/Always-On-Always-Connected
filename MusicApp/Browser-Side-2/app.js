@@ -26,14 +26,14 @@ database.ref('st').on('value', function(snapshot) {
      "kick1" : "https://raw.githubusercontent.com/matamalaortiz/Always-On-Always-Connected/master/MusicApp/audios/ale_kick_1.mp3",
      "kick2" : "https://raw.githubusercontent.com/matamalaortiz/Always-On-Always-Connected/master/MusicApp/audios/ale_kick_2.mp3",
      "clap" : "https://raw.githubusercontent.com/matamalaortiz/Always-On-Always-Connected/master/MusicApp/audios/ale_clap.mp3",
-     "hh" : "https://raw.githubusercontent.com/Tonejs/Tone.js/master/examples/audio/loop/hh.mp3",
+     "hh" : "https://raw.githubusercontent.com/matamalaortiz/Always-On-Always-Connected/master/MusicApp/audios/ale_hihat.mp3",
      "rim" : "https://raw.githubusercontent.com/matamalaortiz/Always-On-Always-Connected/master/MusicApp/audios/ale_rim.mp3"
    }, function(){
       Tone.Transport.start()}).toMaster()
 
    var drumPattern = new Tone.Pattern(function(time, note){
-     kit.start(note, time) }, ["kick1", "hh", "clap", "hh", "kick2",], 'up').start()
-     drumPattern.playbackRate = 1.6;
+     kit.start(note, time) }, ["kick1", "hh", "clap", "hh",], 'up').start()
+     drumPattern.playbackRate = 2;
      document.body.style.backgroundColor = "black";
  } else {
      console.log('stop');

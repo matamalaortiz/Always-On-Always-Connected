@@ -23,15 +23,17 @@ database.ref('st').on('value', function(snapshot) {
    console.log("play");
 
    var kit = new Tone.MultiPlayer({
-     "kick" : "https://raw.githubusercontent.com/matamalaortiz/Always-On-Always-Connected/master/MusicApp/audios/kick7.wav",
-     "snare" : "https://raw.githubusercontent.com/matamalaortiz/Always-On-Always-Connected/master/MusicApp/audios/simplesnare2.WAV",
-     "hh" : "https://raw.githubusercontent.com/matamalaortiz/Always-On-Always-Connected/master/MusicApp/audios/clap1.wav"
+     "kick1" : "https://raw.githubusercontent.com/matamalaortiz/Always-On-Always-Connected/master/MusicApp/audios/ale_kick_1.mp3",
+     "kick2" : "https://raw.githubusercontent.com/matamalaortiz/Always-On-Always-Connected/master/MusicApp/audios/ale_kick_2.mp3",
+     "clap" : "https://raw.githubusercontent.com/matamalaortiz/Always-On-Always-Connected/master/MusicApp/audios/ale_clap.mp3",
+     "hh" : "https://raw.githubusercontent.com/Tonejs/Tone.js/master/examples/audio/loop/hh.mp3",
+     "rim" : "https://raw.githubusercontent.com/matamalaortiz/Always-On-Always-Connected/master/MusicApp/audios/ale_rim.mp3"
    }, function(){
       Tone.Transport.start()}).toMaster()
 
    var drumPattern = new Tone.Pattern(function(time, note){
-     kit.start(note, time) }, ["kick", "hh", "snare", "hh",], 'up').start()
-     drumPattern.playbackRate = 1.4;
+     kit.start(note, time) }, ["kick1", "hh", "clap", "hh", "kick2",], 'up').start()
+     drumPattern.playbackRate = 1.6;
      document.body.style.backgroundColor = "black";
  } else {
      console.log('stop');

@@ -18,6 +18,9 @@
     <feature name="CameraPreview">
         <param name="ios-package" onload="true" value="CameraPreview" />
     </feature>
+    <feature name="BLE">
+        <param name="ios-package" onload="true" value="BLECentralPlugin" />
+    </feature>
     <name>HelloCordova</name>
     <description>
         A sample Apache Cordova application that responds to the deviceready event.

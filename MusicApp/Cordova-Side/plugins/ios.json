@@ -7,12 +7,14 @@
         "files": {}
     },
     "installed_plugins": {
-        "com.mbppower.camerapreview": {
-            "PACKAGE_NAME": "io.cordova.hellocordova"
-        },
-        "cordova-plugin-whitelist": {
-            "PACKAGE_NAME": "io.cordova.hellocordova"
+        "cordova-plugin-ble-central": {
+            "BLUETOOTH_USAGE_DESCRIPTION": " ",
+            "PACKAGE_NAME": "com.megster.sensortag"
         }
     },
-    "dependent_plugins": {}
+    "dependent_plugins": {
+        "cordova-plugin-compat": {
+            "PACKAGE_NAME": "com.megster.sensortag"
+        }
+    }
 }

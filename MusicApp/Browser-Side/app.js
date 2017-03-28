@@ -84,22 +84,22 @@ function writeClickCount(int) {
 
 // Permanently reads the changes of the database.
 
-database.ref('counter').on('value', function(snapshot) {
-    var value = snapshot.val();
-    console.log('read value:', value);
-    count.innerHTML = value.buttonClicked;
-    picasso.style.transform = 'rotateX(' + value.buttonClicked + 'deg)'
-    //  console.log('here +' + value.buttonClicked);
-
-    // trigger Synth when counter is 1
-    if (value.buttonClicked === 1) {
-        console.log("hi");
-        synth.triggerAttack('c2');
-    } else {
-        synth.triggerRelease();
-
-    }
-});
+// database.ref('counter').on('value', function(snapshot) {
+//     var value = snapshot.val();
+//     console.log('read value:', value);
+//     count.innerHTML = value.buttonClicked;
+//     picasso.style.transform = 'rotateX(' + value.buttonClicked + 'deg)'
+//     //  console.log('here +' + value.buttonClicked);
+//
+//     // trigger Synth when counter is 1
+//     if (value.buttonClicked === 1) {
+//         console.log("hi");
+//         synth.triggerAttack('c2');
+//     } else {
+//         synth.triggerRelease();
+//
+//     }
+// });
 
 // 0 or 1 if the bt2 (in cordova) is pressed
 database.ref('bt2').on('value', function(snapshot) {
@@ -190,7 +190,7 @@ database.ref('bt4').on('value', function(snapshot) {
 
 });
 
-database.ref('btn').on('value', function(snapshot) {
+database.ref('bt5').on('value', function(snapshot) {
 
     var value = snapshot.val();
 
@@ -221,6 +221,39 @@ database.ref('btn').on('value', function(snapshot) {
     }
 
 });
+
+database.ref('btn').on('value', function(snapshot) {
+
+    var value = snapshot.val();
+
+    if (value.buttonClicked === 1) {
+        console.log("play sensotag");
+
+        // synth.triggerAttack('c2')
+
+        var player = new Tone.Player("https://raw.githubusercontent.com/matamalaortiz/Always-On-Always-Connected/master/MusicApp/audios/makeus.mp3")
+          .toMaster()
+          player.autostart = true;
+          word.innerHTML = "STRONGER";
+          document.body.style.backgroundColor = "yellow";
+
+
+        readClickCountOnce(function(value) {
+            // console.log('clicked ->',value.buttonClicked);
+            writeClickCount(value.buttonClicked + 1);
+            // console.log(value.buttonClicked);
+
+        });
+
+    } else {
+
+        // synthillator.stop();
+        console.log('stop sensortag');
+        synth.triggerRelease()
+    }
+
+});
+
 
 
 // Getting the name of User

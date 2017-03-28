@@ -1,3 +1,4 @@
+
 // Initialize Firebase
 var config = {
   apiKey: "AIzaSyBiuFnow3ATj8T1p4_OTOrq5-H-lq2R7Yz9pg",
@@ -6,8 +7,8 @@ var config = {
   storageBucket: "music-a48a0.appspot.com",
   messagingSenderId: "846232769714"
 };
-firebase.initializeApp(config);
 
+firebase.initializeApp(config);
 
 var database = firebase.database();
 
@@ -45,8 +46,9 @@ var app = {
     var boton2 = document.getElementById("btn2");
     var boton3 = document.getElementById("btn3");
     var boton4 = document.getElementById("btn4");
+    var boton5 = document.getElementById("btn5");
 
-    // 
+    //
     // boton.addEventListener('click', function(e){
     //   readClickCountOnce(function(value) {
     //   writeClickCount(value.buttonClicked+ 1);
@@ -105,6 +107,23 @@ var app = {
       var down = false;
       if (down === false ){
           firebase.database().ref('bt4').set({buttonClicked: 0});
+      }
+    }
+
+    function mouseDown5(e) {
+        var down = true;
+        if (down === true ){
+          firebase.database().ref('bt5').set({buttonClicked: 1});
+        }
+        e.preventDefault();
+        return false;
+    }
+
+
+    function mouseUp5() {
+      var down = false;
+      if (down === false ){
+          firebase.database().ref('bt5').set({buttonClicked: 0});
       }
     }
 

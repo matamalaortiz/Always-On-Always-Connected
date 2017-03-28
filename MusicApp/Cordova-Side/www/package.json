@@ -1,0 +1,14 @@
+{
+  "name": "cordova-app-music",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack ./js/index.js ./js/bundle.js"
+    },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "webpack": "^2.2.1"
+  }
+}

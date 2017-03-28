@@ -91,7 +91,7 @@ database.ref('bt5').on('value', function(snapshot) {
 
   if (value.buttonClicked === 1) {
     console.log("play");
-    var player = new Tone.Player("https://raw.githubusercontent.com/matamalaortiz/Always-On-Always-Connected/master/MusicApp/audios/ale_nasal_chord_C.mp3")
+    var player = new Tone.Player("https://raw.githubusercontent.com/matamalaortiz/Always-On-Always-Connected/master/MusicApp/audios/ale_lead_phrase.mp3")
      .toMaster()
     player.autostart = true;
     word.innerHTML = "•¶∞¶§";

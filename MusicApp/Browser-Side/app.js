@@ -22,7 +22,7 @@ database.ref('btn').on('value', function(snapshot) {
 
   if (value.buttonClicked === 1) {
     console.log("play");
-    var player = new Tone.Player("https://raw.githubusercontent.com/matamalaortiz/Always-On-Always-Connected/master/MusicApp/audios/ale_nasal_chord_e_min.mp3")
+    var player = new Tone.Player("https://raw.githubusercontent.com/matamalaortiz/Always-On-Always-Connected/master/MusicApp/audios/ale_ambi_chord_C.mp3")
      .toMaster()
     player.autostart = true;
     word.innerHTML = "æ÷¡Ω≈";
@@ -39,7 +39,7 @@ database.ref('bt2').on('value', function(snapshot) {
 
   if (value.buttonClicked === 1) {
     console.log("play");
-    var player = new Tone.Player("https://raw.githubusercontent.com/matamalaortiz/Always-On-Always-Connected/master/MusicApp/audios/ale_nasal_chord_A.mp3")
+    var player = new Tone.Player("https://raw.githubusercontent.com/matamalaortiz/Always-On-Always-Connected/master/MusicApp/audios/ale_ambi_chord_F.mp3")
      .toMaster()
     player.autostart = true;
     word.innerHTML = "µµ˜√";
@@ -56,7 +56,7 @@ database.ref('bt3').on('value', function(snapshot) {
 
   if (value.buttonClicked === 1) {
     console.log("play");
-    var player = new Tone.Player("https://raw.githubusercontent.com/matamalaortiz/Always-On-Always-Connected/master/MusicApp/audios/ale_nasal_chord_A.mp3")
+    var player = new Tone.Player("https://raw.githubusercontent.com/matamalaortiz/Always-On-Always-Connected/master/MusicApp/audios/ale_ambi_chord_G.mp3")
      .toMaster()
     player.autostart = true;
     word.innerHTML = "∆˚¬¬"
@@ -73,7 +73,7 @@ database.ref('bt4').on('value', function(snapshot) {
 
   if (value.buttonClicked === 1) {
     console.log("play");
-    var player = new Tone.Player("https://raw.githubusercontent.com/matamalaortiz/Always-On-Always-Connected/master/MusicApp/audios/ale_nasal_chord_C.mp3")
+    var player = new Tone.Player("https://raw.githubusercontent.com/matamalaortiz/Always-On-Always-Connected/master/MusicApp/audios/ale_ambi_chord_a_min.mp3")
      .toMaster()
     player.autostart = true;
     word.innerHTML = "ºª•¶§";

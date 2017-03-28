@@ -33,7 +33,7 @@ database.ref('st').on('value', function(snapshot) {
 
    var drumPattern = new Tone.Pattern(function(time, note){
      kit.start(note, time) }, ["kick1", "hh", "clap", "hh",], 'up').start()
-     drumPattern.playbackRate = 2;
+     drumPattern.playbackRate = 1.8;
      document.body.style.backgroundColor = "black";
  } else {
      console.log('stop');

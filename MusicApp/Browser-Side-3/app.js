@@ -25,7 +25,7 @@ database.ref('btn').on('value', function(snapshot) {
     var player = new Tone.Player("https://raw.githubusercontent.com/matamalaortiz/Always-On-Always-Connected/master/MusicApp/audios/ale_ambi_chord_C.mp3")
      .toMaster()
     player.autostart = true;
-    word.innerHTML = "¥ππ∆";
+    word.innerHTML = "æ÷¡Ω≈";
     document.body.style.backgroundColor = '#009FB7';
   } else {
     console.log('stop');
@@ -43,7 +43,7 @@ database.ref('bt2').on('value', function(snapshot) {
      .toMaster()
     player.autostart = true;
     word.innerHTML = "µµ˜√";
-    document.body.style.backgroundColor = '#E4DFDA';
+    document.body.style.backgroundColor = 'pink';
   } else {
     console.log('stop');
     }
@@ -59,7 +59,7 @@ database.ref('bt3').on('value', function(snapshot) {
     var player = new Tone.Player("https://raw.githubusercontent.com/matamalaortiz/Always-On-Always-Connected/master/MusicApp/audios/ale_ambi_chord_G.mp3")
      .toMaster()
     player.autostart = true;
-    word.innerHTML = "¡™££¢"
+    word.innerHTML = "∆˚¬¬"
     document.body.style.backgroundColor = '#ff3434';
   } else {
     console.log('stop');
@@ -107,8 +107,8 @@ database.ref('bt5').on('value', function(snapshot) {
          var player = new Tone.Player(phrases[idx])
           .toMaster()
          player.autostart = true;
-         word.innerHTML = "•¶∞¶§";
-         document.body.style.backgroundColor = 'lightgreen';
+         word.innerHTML = "•µ˜©¶§";
+         document.body.style.backgroundColor = '#FFA01C';
   }
 
   }

@@ -25,8 +25,8 @@ database.ref('btn').on('value', function(snapshot) {
     var player = new Tone.Player("https://raw.githubusercontent.com/matamalaortiz/Always-On-Always-Connected/master/MusicApp/audios/ale_ambi_chord_C.mp3")
      .toMaster()
     player.autostart = true;
-    word.innerHTML = "¥ππ∆";
-    document.body.style.backgroundColor = '#009FB7';
+    word.innerHTML = "æ÷¡Ω≈";
+    document.body.style.backgroundColor = 'orange';
   } else {
     console.log('stop');
     }
@@ -42,8 +42,8 @@ database.ref('bt2').on('value', function(snapshot) {
     var player = new Tone.Player("https://raw.githubusercontent.com/matamalaortiz/Always-On-Always-Connected/master/MusicApp/audios/ale_ambi_chord_F.mp3")
      .toMaster()
     player.autostart = true;
-    word.innerHTML = "µµ˜√";
-    document.body.style.backgroundColor = '#E4DFDA';
+    word.innerHTML = "©ß≈˙Ω";
+    document.body.style.backgroundColor = '#BCEDF6';
   } else {
     console.log('stop');
     }
@@ -59,8 +59,8 @@ database.ref('bt3').on('value', function(snapshot) {
     var player = new Tone.Player("https://raw.githubusercontent.com/matamalaortiz/Always-On-Always-Connected/master/MusicApp/audios/ale_ambi_chord_G.mp3")
      .toMaster()
     player.autostart = true;
-    word.innerHTML = "¡™££¢"
-    document.body.style.backgroundColor = '#ff3434';
+    word.innerHTML = "øø˚¬¬¥ø"
+    document.body.style.backgroundColor = '#DDFBD2';
   } else {
     console.log('stop');
     }
@@ -76,8 +76,8 @@ database.ref('bt4').on('value', function(snapshot) {
     var player = new Tone.Player("https://raw.githubusercontent.com/matamalaortiz/Always-On-Always-Connected/master/MusicApp/audios/ale_ambi_chord_a_min.mp3")
      .toMaster()
     player.autostart = true;
-    word.innerHTML = "ºª•¶§";
-    document.body.style.backgroundColor = 'blue';
+    word.innerHTML = "Ωç√˜≤®";
+    document.body.style.backgroundColor = '#FED766';
   } else {
     console.log('stop');
     }
@@ -108,7 +108,7 @@ database.ref('bt5').on('value', function(snapshot) {
           .toMaster()
          player.autostart = true;
          word.innerHTML = "•¶∞¶§";
-         document.body.style.backgroundColor = 'lightgreen';
+         document.body.style.backgroundColor = '#29B2A4';
   }
 
   }

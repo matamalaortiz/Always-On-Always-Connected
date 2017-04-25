@@ -1,0 +1,46 @@
+
+h1#word {
+    margin-top: 15%;
+    font-family: Helvetica;
+    font-size: 215px;
+}
+
+body {
+     background-color: #fff;
+     /*-webkit-animation: random 5s infinite;
+     animation: random 5s infinite;*/
+}
+@keyframes  random {
+    5% { background-color: #4281A4; }
+    15% { background-color: white; }
+    25% { background-color: #4281A4; }
+    30% { background-color: white; }
+    40% { background-color: #4281A4; }
+    55% { background-color: white; }
+    65% { background-color: #4281A4; }
+    70% { background-color: white; }
+    75% { background-color: #4281A4; }
+    85% { background-color: white; }
+}
+
+@keyframes   black {
+    0% { background-color: #4281A4; }
+    100% { background-color: #4281A4; }
+}
+
+
+/*
+@keyframes mymove{
+    form{background-color: #38dc58; }
+    to{background-color: #9b40f1;}
+}
+YOU CAN USE LIKE IT TOO :d
+*/
+
+
+.center
+{
+  margin:auto;
+  position:absolute;
+  top:0; bottom:0; left:0; right:0;
+}

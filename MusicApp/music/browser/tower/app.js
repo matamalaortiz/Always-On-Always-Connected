@@ -39,7 +39,7 @@ database.ref('tower2').on('value', function(snapshot) {
 
   if (value.buttonClicked === 1) {
     console.log("play");
-    var player = new Tone.Player("https://raw.githubusercontent.com/matamalaortiz/Always-On-Always-Connected/master/MusicApp/audios/ale_ambi_chord_F.mp3")
+    var player = new Tone.Player("https://raw.githubusercontent.com/matamalaortiz/Always-On-Always-Connected/master/MusicApp/audios/samples/telurico.mp3")
      .toMaster()
     player.autostart = true;
     word.innerHTML = "µµ˜√";

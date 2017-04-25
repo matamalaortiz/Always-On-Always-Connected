@@ -74,7 +74,7 @@ database.ref('bt4').on('value', function(snapshot) {
 
   if (value.buttonClicked === 1) {
     console.log("play");
-    var player = new Tone.Player("https://raw.githubusercontent.com/matamalaortiz/Always-On-Always-Connected/master/MusicApp/audios/ale_ambi_chord_a_min.mp3")
+    var player = new Tone.Player("https://raw.githubusercontent.com/matamalaortiz/Always-On-Always-Connected/master/MusicApp/audios/samples/masha.mp3")
      .toMaster()
     player.autostart = true;
     var video = document.querySelector('video')

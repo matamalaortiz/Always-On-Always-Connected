@@ -10,6 +10,8 @@ var config = {
 
 firebase.initializeApp(config);
 var database = firebase.database();
+var drumPattern;
+var drumPattern3;
 
 ///########## END FIREBASE CONFIG ############ //
 
@@ -23,13 +25,14 @@ database.ref('stb').on('value', function(snapshot) {
    console.log("play");
 
    var kit2 = new Tone.MultiPlayer({
-     "kick1" : "https://raw.githubusercontent.com/matamalaortiz/Always-On-Always-Connected/master/MusicApp/audios/ale_kick_1.mp3"
+     "kick1" : "https://raw.githubusercontent.com/matamalaortiz/Always-On-Always-Connected/master/MusicApp/audios/ale_kick_1.mp3",
+     "silence" : "https://raw.githubusercontent.com/matamalaortiz/Always-On-Always-Connected/master/MusicApp/audios/silence.mp3"
    }, function(){
       Tone.Transport.start()}).toMaster()
 
    var drumPattern2 = new Tone.Pattern(function(time, note){
-     kit2.start(note, time) }, ["kick1", " ", "kick1", " ",], 'up').start()
-     drumPattern2.playbackRate = 1.0;
+     kit2.start(note, time) }, ["kick1", "silence", "kick1", "silence",], 'up').start()
+     drumPattern2.playbackRate = 1.8;
      document.body.style.animation = "random 5s infinite";
      document.body.style.backgroundColor = "yellow";
 
@@ -47,13 +50,19 @@ database.ref('st2').on('value', function(snapshot) {
           "kick2" : "https://raw.githubusercontent.com/matamalaortiz/Always-On-Always-Connected/master/MusicApp/audios/ale_kick_2.mp3",
           "clap" : "https://raw.githubusercontent.com/matamalaortiz/Always-On-Always-Connected/master/MusicApp/audios/ale_clap.mp3",
           "hh" : "https://raw.githubusercontent.com/matamalaortiz/Always-On-Always-Connected/master/MusicApp/audios/ale_hihat.mp3",
-          "rim" : "https://raw.githubusercontent.com/matamalaortiz/Always-On-Always-Connected/master/MusicApp/audios/ale_rim.mp3"
+          "rim" : "https://raw.githubusercontent.com/matamalaortiz/Always-On-Always-Connected/master/MusicApp/audios/ale_rim.mp3",
+          "silence" : "https://raw.githubusercontent.com/matamalaortiz/Always-On-Always-Connected/master/MusicApp/audios/silence.mp3"
+
         }, function(){
            Tone.Transport.start()}).toMaster()
 
-        var drumPattern = new Tone.Pattern(function(time, note){
+          drumPattern = new Tone.Pattern(function(time, note){
           kit.start(note, time) }, ["kick1", "hh", "clap", "hh",], 'up').start()
+          drumPattern3 = new Tone.Pattern(function(time, note){
+          kit.start(note, time) }, ["silence", "silence", "kick2", "silence",], 'up').start()
           drumPattern.playbackRate = 1.8;
+          drumPattern3.playbackRate = 1.8;
+
           document.body.style.animation = "random 5s infinite";
 
       }
@@ -65,7 +74,7 @@ database.ref('st2').on('value', function(snapshot) {
 
       if (value.buttonClicked === 1) {
 
-          drumPattern.mute = true;
+          drumPattern2.mute = true;
 
           document.body.style.animation = "black 5s infinite";
       }
@@ -77,9 +86,9 @@ database.ref('st2').on('value', function(snapshot) {
       var value = snapshot.val();
 
       if (value.buttonClicked === 1) {
-       var player = new Tone.Player("https://raw.githubusercontent.com/matamalaortiz/Always-On-Always-Connected/master/MusicApp/audios/ale_kick_1.mp3")
-        .toMaster()
-       player.autostart = true;
+          drumPattern.mute = true;
+          drumPattern3.mute = true;
+
           document.body.style.backgroundColor = "magenta";
       }
      });
@@ -90,9 +99,8 @@ database.ref('st2').on('value', function(snapshot) {
 
       if (value.buttonClicked === 1) {
 
-       var player = new Tone.Player("https://raw.githubusercontent.com/matamalaortiz/Always-On-Always-Connected/master/MusicApp/audios/ale_clap.mp3")
-        .toMaster()
-       player.autostart = true;
+
+        drumPattern2.mute = true;
           document.body.style.backgroundColor = "magenta";
       }
      });

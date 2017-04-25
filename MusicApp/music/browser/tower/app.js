@@ -17,7 +17,7 @@ var database = firebase.database();
 
 // ### First Pad Chord E
 
-database.ref('btn').on('value', function(snapshot) {
+database.ref('tower1').on('value', function(snapshot) {
   var value = snapshot.val();
 
   if (value.buttonClicked === 1) {
@@ -34,7 +34,7 @@ database.ref('btn').on('value', function(snapshot) {
 
 // ### Second Pad Chord A
 
-database.ref('bt2').on('value', function(snapshot) {
+database.ref('tower2').on('value', function(snapshot) {
   var value = snapshot.val();
 
   if (value.buttonClicked === 1) {
@@ -51,7 +51,7 @@ database.ref('bt2').on('value', function(snapshot) {
 
 // ### Third Pad Chord A
 
-database.ref('bt3').on('value', function(snapshot) {
+database.ref('tower3').on('value', function(snapshot) {
   var value = snapshot.val();
 
   if (value.buttonClicked === 1) {
@@ -69,7 +69,7 @@ database.ref('bt3').on('value', function(snapshot) {
 
 // ### Four Pad Chord C
 
-database.ref('bt4').on('value', function(snapshot) {
+database.ref('tower4').on('value', function(snapshot) {
   var value = snapshot.val();
 
   if (value.buttonClicked === 1) {
@@ -91,40 +91,15 @@ database.ref('bt4').on('value', function(snapshot) {
 
 // ### Five Pad Chord C
 
-database.ref('bt5').on('value', function(snapshot) {
+database.ref('tower5').on('value', function(snapshot) {
   var value = snapshot.val();
 
   if (value.buttonClicked === 1) {
     console.log("play");
 
-
- var phrases = ["https://raw.githubusercontent.com/matamalaortiz/Always-On-Always-Connected/master/MusicApp/audios/ale_lead_phrase.mp3",
-    "https://raw.githubusercontent.com/matamalaortiz/Always-On-Always-Connected/master/MusicApp/audios/ale_lead_phrase_2.mp3","https://raw.githubusercontent.com/matamalaortiz/Always-On-Always-Connected/master/MusicApp/audios/ale_lead_phrase_4.mp3","https://raw.githubusercontent.com/matamalaortiz/Always-On-Always-Connected/master/MusicApp/audios/ale_lead_phrase_short.mp3"]
- var newPhrase = [];
-
-  for(var i = 0; i < phrases.length ; i++) {
-      var idx = Math.floor(Math.random() * phrases.length);
-      console.log(idx);
-      newPhrase.push(phrases[idx]);
-      phrases.splice(idx, 1);
-      console.log(phrases[idx]);
-      // console.log(newPhrase);
-         var player = new Tone.Player(phrases[idx])
-          .toMaster()
-         player.autostart = true;
-         word.innerHTML = "•¶∞¶§";
-         document.body.style.backgroundColor = 'lightgreen';
-  }
+    var player = new Tone.Player("https://raw.githubusercontent.com/matamalaortiz/Always-On-Always-Connected/master/MusicApp/audios/samples/masha.mp3")
+     .toMaster()
+    player.autostart = true;
 
   }
-});
-
-
-/// ########## USERS ############ ///
-
-database.ref('users').on('value', function(snapshot) {
-  var value = snapshot.val()
-  var name = value.name
-  console.log(name);
-  word.innerHTML = value.name;
 });

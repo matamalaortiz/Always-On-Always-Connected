@@ -1,0 +1,14 @@
+body{
+  perspective: 300px;
+}
+#main {
+  text-align: center;
+}
+img#picasso{
+  margin: auto;
+}
+marquee#word {
+    margin-top: 15%;
+    font-family: Helvetica;
+    font-size: 215px;
+}

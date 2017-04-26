@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+        <title>Hello World</title>
+        <script type="text/javascript" src="cordova.js"></script>
+
+        <script src="https://www.gstatic.com/firebasejs/3.6.10/firebase.js"></script>
+
+        <style>
+        body {
+          margin: 0;
+          background-color: #b33838;
+        }
+        #btn {
+            margin-top: 0px;
+            background-color: #91cfca;
+            padding: 20px;
+            width: 50%;
+            height: 233px;
+            position: absolute;
+            border: none;
+            float: left;
+            border-radius: 0px;
+        }
+
+
+        #btn2 {
+            margin-top: 0px;
+            background-color: pink;
+            padding: 20px;
+            width: 50%;
+            height: 233px;
+            margin-left: 50%;
+            border: none;
+            float: left;
+            border-radius: 0px;
+        }
+
+        #btn3 {
+            background-color: #ff3434;
+            padding: 20px;
+            width: 50%;
+            height: 233px;
+            border: none;
+            float: left;
+            border-radius: 0px;
+        }
+
+        #btn4 {
+            margin-top: -233px;
+            background-color: plum;
+            padding: 20px;
+            width: 50%;
+            height: 233px;
+            margin-left: 50%;
+            border: none;
+            float: left;
+            border-radius: 0px;
+        }
+
+
+        #btn5 {
+          margin-top: 0px;
+          background-color: goldenrod;
+          padding: 20px;
+          width: 100%;
+          height: 76px;
+          margin-left: 50%;
+          border: none;
+          float: right;
+          margin-bottom: -5%;
+          border-radius: 0px;
+      }
+        input#name {
+            margin-top: 50px;
+            left: 10px;
+            position: absolute;
+            width: 35%;
+            height: 5%;
+            font-size: 19px;
+            z-index: 1000;
+            padding: 19px;
+            color: #171717;
+            border: none;
+            background-color: #ff7878;
+        }
+
+        button#submit {
+            left: 50%;
+            position: absolute;
+            margin-top: 39px;
+            width: 170px;
+            height: 68px;
+            border: none;
+            color: white;
+            font-size: 23px;
+            background-color: black;
+            z-index: 1000;
+        }
+        div{
+          width: 50%;
+          height: 333px;
+          float: left;
+        }
+        div.one{
+          background-color: #647096;
+        }
+        div.two{
+          background-color: #d5e0f4;
+        }
+        div.three{
+          background-color: #e2e2e2;
+        }
+        div.four{
+          background-color: #91cfca;
+        }
+        div.five{
+          background-color: #ddc191;
+        }
+        div.six{
+          background-color: #647096;
+        }
+
+
+
+        </style>
+    </head>
+    <body>
+
+ <button id="btn" ontouchstart="mouseDown0()" ontouchend="mouseUp0()"></button>
+  <button id="btn2" ontouchstart="mouseDown()" ontouchend="mouseUp()"></button>
+    <button id="btn3" ontouchstart="mouseDown3()" ontouchend="mouseUp3()" ></button>
+      <button id="btn4" ontouchstart="mouseDown4()" ontouchend="mouseUp4()"></button>
+      <button id="btn5" ontouchstart="mouseDown5()" ontouchend="mouseUp5()"></button>
+
+        <div id='nameInput'>
+          <input type="text" value="Value" id="name"><br />
+          <button id="submit" type="button">Submit</button>
+      </div>
+<script type="text/javascript" src="./js/index.js"></script>
+<script type="text/javascript" src="./js/ble.js"></script>
+
+<script>
+
+
+</script>
+
+    </body>
+</html>

@@ -1,0 +1,255 @@
+@font-face {
+    font-family: 'Avara';
+    src: url('./fonts/Avara.otf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    font-family: Avara;
+    font-weight: bold;
+    background-color: black;
+    color: white;
+}
+
+a {
+    text-decoration: none;
+}
+
+a#dom {
+    color: white;
+    position: fixed;
+    z-index: 10000;
+    top: 30px;
+    left: 40px;
+    font-size: 58px;
+}
+
+a#sc {
+    color: white;
+    position: fixed;
+    z-index: 10000;
+    bottom: 30px;
+    left: 40px;
+    font-size: 22px;
+}
+
+a#itp {
+    color: black;
+    position: fixed;
+    z-index: 10000;
+    top: 64px;
+    left: 45%;
+    font-size: 22px;
+}
+
+a#at {
+    color: black;
+    position: fixed;
+    z-index: 10000;
+    top: 64px;
+    left: 85%;
+    font-size: 22px;
+}
+
+p#message {
+    position: fixed;
+    margin-left: 33%;
+    top: 47%;
+    left: 4%;
+    color: #9ac575;
+    z-index: 5;
+    font-size: 23px;
+}
+
+p#scroll {
+    position: absolute;
+    ;
+    bottom: 45px;
+    right: 45px;
+    color: black;
+    z-index: 5;
+}
+
+img#img001 {
+    margin-top: -267%;
+}
+
+.credits {
+    position: fixed;
+    left: 79%;
+    top: 50%;
+    font-size: 23px;
+    z-index: -1;
+    line-height: 20px;
+    transform: rotate(-90deg);
+}
+
+img.dots {
+    position: fixed;
+    top: 10px;
+    z-index: -10;
+}
+
+img#img2 {
+    margin-left: 0%;
+}
+
+img#img3 {
+    height: : 145%;
+    margin-top: -30%;
+}
+
+img#img4.clockwise {
+    width: 10% margin-top: 0%;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 0px;
+    background: white;
+}
+
+::-webkit-scrollbar {
+    width: 20px;
+    background: black;
+}
+
+.description {
+    width: 50%;
+    font-weight: normal;
+    margin-left: 2.3%;
+    margin-top: 5.4%;
+    font-size: 28px;
+    line-height: 27px;
+}
+
+.issues {
+    font-size: 212px;
+    width: 91%;
+    margin: 2%;
+    line-height: 180px;
+    margin-bottom: 15%;
+}
+
+#lastIssue {
+    margin-top: 60%;
+}
+
+a#d03 {
+    color: yellow;
+}
+
+a#d02 {
+    color: red;
+}
+
+#d01 a {
+    color: blue;
+}
+
+
+/* Animations */
+
+.clockwise {
+    -webkit-animation: clockwiseSpin 100s infinite linear;
+    animation: clockwiseSpin 100s infinite linear;
+}
+
+@-webkit-keyframes clockwiseSpin {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes clockwiseSpin {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(160deg);
+        transform: rotate(360deg);
+    }
+}
+
+
+/* Anti */
+
+.anticlockwise {
+    -webkit-animation: antiClockwiseSpin 10s infinite linear;
+    animation: antiClockwiseSpin 10s infinite linear;
+}
+
+@-webkit-keyframes antiClockwiseSpin {
+    0% {
+        -webkit-transform: rotate(30deg);
+        transform: rotate(0deg);
+    }
+    250% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(30deg);
+    }
+}
+
+@keyframes antiClockwiseSpin {
+    0% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+    250% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+}
+
+@media screen and (max-width: 764px) {
+    body {
+        overflow-x: hidden !important;
+    }
+    a#dom {
+        font-size: 42px;
+        top: 40px;
+    }
+    .credits {
+        position: fixed;
+        left: 3%;
+        top: 44%;
+        font-size: 17px;
+        z-index: -1;
+        line-height: 20px;
+        transform: rotate(-90deg);
+    }
+    img.dots {
+        position: fixed;
+        top: 0;
+        WIDTH: 149%;
+        left: 10%;
+        z-index: -10;
+    }
+    img#img001 {
+        margin-top: -72%;
+        margin-left: -66%;
+    }
+    img#imgm {
+        position: fixed;
+        top: -26%;
+        width: 243%;
+        left: 2%;
+    }
+    p#desktop {
+        position: absolute;
+        bottom: 15px;
+        margin-left: 7%;
+        font-size: 10px;
+        z-index: 10;
+    }
+}

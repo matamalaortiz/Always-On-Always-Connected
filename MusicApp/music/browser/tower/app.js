@@ -10,96 +10,60 @@ var config = {
 
 firebase.initializeApp(config);
 var database = firebase.database();
-
-/// ########## END FIREBASE CONFIG ############ ///
-
-/// ########## PAD ############ ///
-
-// ### First Pad Chord E
+var video = document.querySelector('video')
 
 database.ref('tower1').on('value', function(snapshot) {
   var value = snapshot.val();
-
   if (value.buttonClicked === 1) {
-    console.log("play");
-    var player = new Tone.Player("https://raw.githubusercontent.com/matamalaortiz/Always-On-Always-Connected/master/MusicApp/audios/ale_ambi_chord_C.mp3")
-     .toMaster()
+    console.log("play tower 1");
+    var player = new Tone.Player("https://raw.githubusercontent.com/matamalaortiz/Always-On-Always-Connected/master/MusicApp/audios/samples/macha2.mp3").toMaster()
     player.autostart = true;
-    word.innerHTML = "¥ππ∆";
     document.body.style.backgroundColor = '#009FB7';
-  } else {
-    console.log('stop');
+    document.querySelector("#circles").style.display = "none";
+    video.classList.add('hide');
     }
 });
 
-// ### Second Pad Chord A
 
 database.ref('tower2').on('value', function(snapshot) {
   var value = snapshot.val();
-
   if (value.buttonClicked === 1) {
-    console.log("play");
-    var player = new Tone.Player("https://raw.githubusercontent.com/matamalaortiz/Always-On-Always-Connected/master/MusicApp/audios/samples/telurico.mp3")
-     .toMaster()
+    console.log("play telurico ");
+    var player = new Tone.Player("https://raw.githubusercontent.com/matamalaortiz/Always-On-Always-Connected/master/MusicApp/audios/samples/telurico.mp3").toMaster()
     player.autostart = true;
-    word.innerHTML = "µµ˜√";
-    document.body.style.backgroundColor = '#E4DFDA';
-  } else {
-    console.log('stop');
+    document.body.style.backgroundColor = '#black';
+    document.querySelector("#circles").style.display = "block";
+    video.classList.add('hide');
+    console.log('changedisplay');
     }
 });
 
-// ### Third Pad Chord A
 
 database.ref('tower3').on('value', function(snapshot) {
   var value = snapshot.val();
-
   if (value.buttonClicked === 1) {
-    var video = document.querySelector('video')
-    console.log('hi');
+    console.log('Play tower 3');
     video.classList.add('show');
     video.classList.remove('hide');
+    document.querySelector("#circles").style.display = "none";
 
-  } else {
-    video.classList.remove('show');
-    video.classList.add('hide');
-    // console.log('stop');
+    } else {
+        video.classList.remove('show');
+        video.classList.add('hide');
     }
 });
 
-// ### Four Pad Chord C
 
 database.ref('tower4').on('value', function(snapshot) {
   var value = snapshot.val();
-
   if (value.buttonClicked === 1) {
-    console.log("play");
-    var player = new Tone.Player("https://raw.githubusercontent.com/matamalaortiz/Always-On-Always-Connected/master/MusicApp/audios/samples/masha.mp3")
-     .toMaster()
+    console.log("play tower 4");
+    var player = new Tone.Player("https://raw.githubusercontent.com/matamalaortiz/Always-On-Always-Connected/master/MusicApp/audios/samples/masha.mp3").toMaster()
     player.autostart = true;
     var video = document.querySelector('video')
     console.log('hi');
     video.classList.add('hide');
     video.classList.remove('show');
-    word.innerHTML = "ºª•¶§";
-    document.body.style.backgroundColor = 'blue';
-  } else {
-    console.log('stop');
+    document.body.style.backgroundColor = '#971B2F';
     }
-});
-
-
-// ### Five Pad Chord C
-
-database.ref('tower5').on('value', function(snapshot) {
-  var value = snapshot.val();
-
-  if (value.buttonClicked === 1) {
-    console.log("play");
-
-    var player = new Tone.Player("https://raw.githubusercontent.com/matamalaortiz/Always-On-Always-Connected/master/MusicApp/audios/samples/masha.mp3")
-     .toMaster()
-    player.autostart = true;
-
-  }
 });

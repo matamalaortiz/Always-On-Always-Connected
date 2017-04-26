@@ -118,22 +118,22 @@ var app = {
       }
     }
 
-    // function mouseDown5(e) {
-    //     var down = true;
-    //     if (down === true ){
-    //       firebase.database().ref('talk5').set({buttonClicked: 1});
-    //     }
-    //     e.preventDefault();
-    //     return false;
-    // }
-    //
-    //
-    // function mouseUp5() {
-    //   var down = false;
-    //   if (down === false ){
-    //       firebase.database().ref('talk5').set({buttonClicked: 0});
-    //   }
-    // }
+    function mouseDown5(e) {
+        var down = true;
+        if (down === true ){
+          firebase.database().ref('talka5').set({buttonClicked: 1});
+        }
+        e.preventDefault();
+        return false;
+    }
+
+
+    function mouseUp5() {
+      var down = false;
+      if (down === false ){
+          firebase.database().ref('talka5').set({buttonClicked: 0});
+      }
+    }
 
 
 

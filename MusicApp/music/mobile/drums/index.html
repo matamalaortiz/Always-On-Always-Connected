@@ -18,7 +18,7 @@
             background-color: #BFC4D5;
             padding: 20px;
             width: 50%;
-            height: 233px;
+            height: 350px;
             position: absolute;
             border: none;
             float: left;
@@ -31,7 +31,7 @@
             background-color: #9091AD;
             padding: 20px;
             width: 50%;
-            height: 233px;
+            height: 350px;
             margin-left: 50%;
             border: none;
             float: left;
@@ -42,18 +42,18 @@
             background-color: #6D6984;
             padding: 20px;
             width: 50%;
-            height: 233px;
+            height: 350px;
             border: none;
             float: left;
             border-radius: 0px;
         }
 
         #btn4 {
-            margin-top: -233px;
+            margin-top: -350px;
             background-color: #58506C;
             padding: 20px;
             width: 50%;
-            height: 233px;
+            height: 350px;
             margin-left: 50%;
             border: none;
             float: left;
@@ -62,16 +62,29 @@
 
 
         #btn5 {
-          margin-top: 0px;
-          background-color: #42364E;
-          padding: 20px;
-          width: 100%;
-          height: 506px;
-          margin-left: 50%;
+          background-color: #0a5a73;
+          width: 160px;
+          height: 160px;
           border: none;
-          float: right;
-          margin-bottom: -5%;
-          border-radius: 0px;
+          position: absolute;
+          top: 38%;
+          left: 43%;
+          z-index: 5;
+          border-radius: 180px;
+      }
+
+      #title {
+        background-color: black;
+        padding: 10px;
+        width: 130px;
+        height: 16px;
+        font-size: 10px;
+        text-align: center;
+        color: white;
+        position: absolute;
+        z-index: 2;
+        top: 0px;
+        left: 42%;
       }
         input#name {
             margin-top: 50px;
@@ -128,12 +141,13 @@
         </style>
     </head>
     <body>
+      <div id="title">DRUMS</div>
 
     <button id="btn" ontouchstart="mouseDown0()" ontouchend="mouseUp0()">drum kit</button>
     <button id="btn2" ontouchstart="mouseDown()" ontouchend="mouseUp()">kicks</button>
     <button id="btn3" ontouchstart="mouseDown3()" ontouchend="mouseUp3()" >Stop Drum Kit</button>
     <button id="btn4" ontouchstart="mouseDown4()" ontouchend="mouseUp4()">Stop Kicks</button>
-    <button id="btn5" ontouchstart="mouseDown5()" ontouchend="mouseUp5()">Nothing</button>
+    <button id="btn5" ontouchstart="mouseDown5()" ontouchend="mouseUp5()">Telurico Largo</button>
 
     <!-- <div id='nameInput'>
           <input type="text" value="Value" id="name"><br />
